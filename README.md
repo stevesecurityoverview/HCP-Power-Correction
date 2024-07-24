@@ -17,7 +17,7 @@ Sponsored and directed by Dr. Jeremy Purcell @ University of Maryland.
 ## Problem: Are volumes of interest are proportional or linearly related to total intracranial volume
 
 It has been shown that many structures have a power law relationship to ICV
-- Prior methods: 
+Prior methods: 
 - Proportion method: divide raw VOI by ICV
 - ANCVOA: use ICV as a covariate in a regression model w/ VOI as dependent variable
   Performs better than proportion
@@ -25,6 +25,7 @@ It has been shown that many structures have a power law relationship to ICV
 ## Solution
 Applying a power-proportionate method to account for ICV differences
 Studies show:
+
         VOI=⍺*ICV^β
 
 - All VOIs measured besides ventricles followed power law
@@ -37,8 +38,9 @@ Studies show:
 
 ## Other References
 [Neuroanatomical norms in the UK Biobank: The impact of allometric scaling, sex, and age](https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.25572)
-    Problem: No studies done to describe population-wide variations in neuroanatomy
-    Goal: Discover population wide variations in neuroanatomy and generate markers that consider age, sex, and brain size
+
+Problem: No studies done to describe population-wide variations in neuroanatomy
+Goal: Discover population wide variations in neuroanatomy and generate markers that consider age, sex, and brain size
 - Used ~40,000 subjects from UK Biobank to take measures
 - Equation for TBV  
 - Equation for other global measures(ie. MCT, WMV, subcortical GMV, etc.)
