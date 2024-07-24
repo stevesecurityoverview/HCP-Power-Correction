@@ -1,6 +1,10 @@
 # HCP-Power-Correction
 Power Correction Code and Analysis for the Human Connectome Project
 
+This repository contains a spreadsheet of freesurfer outputs adhering to the [HCP (Human Connectome Project)](https://www.humanconnectome.org/) data format.
+It also contains scripts the related to power, rather than linear, correction of intra-cranial volumes.
+This adjustment may improve insights for the NTR dataset, using a processes to normalize correction of volumes across different regions.
+
 ## Credits
 Project Started by Sam Rosenberg
 Adjusted by Stephen Shin and _
