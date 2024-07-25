@@ -7,7 +7,7 @@ This adjustment may improve insights for the NTR dataset, using a processes to n
 
 ## Credits
 Project Started by Sam Rosenberg
-Adjusted by Stephen Shin and _
+Adjusted by Stephen Shin and David Soussana
 
 Sponsored and directed by Dr. Jeremy Purcell @ University of Maryland.
 
