@@ -7,7 +7,7 @@ This adjustment may improve insights for the NTR dataset, using a processes to n
 
 ## Credits
 Project Started by Sam Rosenberg
-Adjusted by Stephen Shin and _
+Adjusted by Stephen Shin, David Soussana, and Matthew Chin.
 
 Sponsored and directed by Dr. Jeremy Purcell @ University of Maryland.
 
@@ -62,3 +62,6 @@ Accountiing for all these factors – importantly allometry – one can draw mor
 PowerPoint
     PowerPoint reiterates method and cites studies that have shown the efficacy of this method
     PPT also shows an example of how using just a proportion method can give incorrect results
+
+
+## TEST
