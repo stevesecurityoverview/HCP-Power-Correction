@@ -2,16 +2,19 @@
 rm(list=ls())
 
 # Install and load required packages
+options(repos = c(CRAN = "https://cran.r-project.org"))
 if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
 if (!requireNamespace("minpack.lm", quietly = TRUE)) install.packages("minpack.lm")
+if (!requireNamespace("gridExtra", quietly = TRUE)) install.packages("gridExtra")
 library(ggplot2)
 library(minpack.lm)
+library(gridExtra)
 
 # Read data
-data <- read.csv('Master_CSV_aging_neural.csv', header=TRUE)
+data <- read.csv('../Master_CSV_aging_neural.csv', header=TRUE)
 
 # Define subcortical structures
-subnames <- c('caudate', 'thalamus', 'putamen', 'pallidum', 'bilateral_hippocampus', 'amygdala', 'accumbens.area', 'VentralDC')
+subnames <- c('caudate', 'thalamus', 'putamen', 'pallidum', 'bilateral_hippocampus', 'amygdala', 'accumbens.area', 'VentralDC', 'Left.Lateral.Ventricle', 'Right.Lateral.Ventricle')
 
 # Initialize data frame for subcortical volumes
 VOI_volumes_raw <- data.frame(matrix(ncol = length(subnames) + 1, nrow = nrow(data)))
@@ -73,11 +76,9 @@ plot_regression_and_ppc <- function(data, voi_name, beta) {
   # Combine plots
   combined_plot <- gridExtra::grid.arrange(p1, p2, ncol = 2)
   
-  # Save the combined plot
-  ggsave(filename = paste0(voi_name, "_PPC_comparison_plot.png"), plot = combined_plot, width = 12, height = 6)
-  
-  # Display the plot
-  print(combined_plot)
+  # Save the combined plot in one line
+  ggsave(filename = file.path("../plots", paste0(voi_name, "_PPC_comparison_plot.png")), plot = combined_plot, width = 12, height = 6)
+
 }
 
 # Initialize results dataframe
@@ -102,4 +103,5 @@ print(results)
 
 # Save results to CSV
 write.csv(results, "PPC_results.csv", row.names = FALSE)
-
+# Output the data frame to a CSV file for debugging purposes
+write.csv(VOI_volumes_raw, file = "VOI_volumes_raw.csv", row.names = FALSE)
